@@ -1,0 +1,85 @@
+## INSTALL ##
+
+#### 1 .Installation requirements ####
+
+* Apache web server with mod_rewrite
+* PHP 5.2.4 or higher
+* Database (version 1.0 requires MySQL database)
+
+#### 2. Installation HOW-TO ####
+
+1. Unzip the installation package
+2. Install the database
+
+* Connect to your MySQL database using this command: 
+
+		mysql -u root -p (press enter and type your password)
+			
+* Create the database with this command: 
+
+		create database zfcol;
+	
+* Create a database user and grant him access to your new database:
+	
+		grant all privileges on zfcol.* TO "user-name"@"localhost" identified by "user-password";
+		flush privileges;
+		exit;
+		(change user-name, localhost and user-password according to your needs)
+    
+* Locate the file `zfcol.sql` and create database tables with this command:
+            
+		mysql -u user-name -p zfcol < zfcol.sql
+		(you will be prompted for your password)
+    
+* Exit the MySQL command line tool
+    
+		exit;
+
+* Locate the file `db-xml.orig` in `application/configs/` and copy (or rename) it to `db.xml`
+* Edit the `db.xml` according to your setup
+
+
+3. Setup your Apache virtual host
+* Locate yout apache configuration file (`httpd.conf` or `apache2.conf`) and create new virtual host for the ZF::Col installation
+
+		<VirtualHost *:80>
+				DocumentRoot "/path/to/zfcol/public"
+				ServerName my-movies.example.org
+			<Directory "/path/to/zfcol/public">
+				Options Indexes MultiViews FollowSymLinks
+				AllowOverride All
+				Order allow,deny
+				Allow from all
+			</Directory>
+		</VirtualHost>
+	
+* Note that the `DocumentRoot` should point to the `public` directory of the unzipped directory structure
+* You do not need to create new virtualhost. An alias is also just fine, but remember to:
+	1. Include all options and overrides in the Apache `Directory` container.
+
+			Alias /my-movies /path/to/zfcol/public/
+
+			<Directory "/var/www/htdocs/my-movies/public/">
+				Options Indexes MultiViews FollowSymLinks
+				AllowOverride All
+				Order allow,deny
+				Allow from all
+			</Directory>		
+	2. Modify the `public/.htaccess` file and add this to the first line:
+  			
+			RewriteBase /my-movies
+
+* Change permissions for the "zfcol" directory so that the webserver is allowed to write in it:
+	
+		chown -R apache:apache /path/to/zfcol
+		(username may differ on your system)
+
+* Point your browser to your newly created virtualhost or alias, ie. `http://my-movies.example.org` or `http://www.example.com/my-movies`
+* If everything went ok, you should see a login screen
+* Log in with the these credentials:
+			
+		username: admin
+		password: zfcol
+
+* After the login, you will be redirected to the App settings page. Please adjust the settings, click Save and change the admin password by clicking on "John Doe" in the upper right corner.
+* Enjoy the app! For questions & bug reports, please visit project's website
