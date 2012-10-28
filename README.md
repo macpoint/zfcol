@@ -8,6 +8,13 @@ The app is written in PHP & Zend Framework. Please see the
 
 file for installation instructions.
 
+### DEMO ###
+Click [here to see ZF::Col in action](http://macpoint.cz/demo). Please use these credentials to log in:
+
+    username: admin
+    password: zfcol
+
+
 ### CHANGELOG ###
 Version 1.0 | Realease date: November 1 2012
 
@@ -34,7 +41,7 @@ Version 1.0 | Realease date: November 1 2012
     * Various app fonts enabled
 
 ### AUTHOR ###
-Kamil Kantar (kamil.kantar@me.com), [http://macpoint.github.com/zfcol](http://url.com/)
+Kamil Kantar (kamil.kantar@me.com), [http://macpoint.github.com/zfcol](http://macpoint.github.com/zfcol)
 
 ### LICENSE ###
 This application is licensed under the new BSD which is bundled with its package
