@@ -7,6 +7,13 @@ your collection with your friends and family.
 The app is written in PHP & Zend Framework. Please see the INSTALL.txt
 file for installation instructions.
 
+DEMO
+====
+Visit http://macpoint.cz/demo to see ZF::Col in action. Please use these credentials to log in:
+
+    username: admin
+    password: zfcol
+
 
 CHANGELOG
 =========
