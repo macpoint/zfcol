@@ -37,4 +37,4 @@ CREATE TABLE `users` (
 INSERT INTO `users` (`id`, `username`, `password`, `first_name`, `last_name`, `role`) VALUES
 (1, 'admin', 'b767e73ff570c2ee968764919ed41c8c1961f092', 'John', 'Doe', 'administrator');
 
-INSERT INTO `media` (`id`, `type`) VALUES (1, 'DVD'), (2, 'Blue-Ray');
+INSERT INTO `media` (`type`) VALUES ('DVD'), ('Blue-Ray');

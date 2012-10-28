@@ -147,17 +147,17 @@ class SettingsController extends Zend_Controller_Action {
         if ($this->_sesskey != $this->getRequest()->getParam('key'))
             throw new Zend_Exception('Control key is invalid');
 
-        // get id of the user
+        // get id of the media
         $id = $this->getRequest()->getParam('id');
 
         // check id is numeric
         $id = Zend_Filter::filterStatic($id, 'Int');
 
-        // check we are not deleteing current user
-        if ($id == 0)
+        // check we are not deleteing media type = 1
+        if ($id == 1)
             throw new Zend_Exception('This media type cannot be deleted');
 
-        // check user with this id exists
+        // check media with this id exists
         $media = new Application_Model_Media();
 
         $type = $media->find($id)->current();
@@ -167,7 +167,7 @@ class SettingsController extends Zend_Controller_Action {
         // prepare the query
         $where = $media->getAdapter()->quoteInto('id = ?', $id);
 
-        // delete the user & notify the user
+        // delete the media & notify the user
         if ($media->delete($where)) {
             $list = $media->fetchAll();
             $this->view->assign('type', 'success')->assign('msg', $this->view->translate('Media was removed'));
