@@ -69,7 +69,7 @@ class Zfcol_Parser_Tmdb implements Zfcol_Parser_Parser {
         $this->_api = $this->_parser->url;
         
         // default poster image if not provided by the parser
-        $this->_default_poster = 'images/default_poster.jpg';
+        $this->_default_poster = 'images/covers/default_poster.jpg';
 
         // set movie key to false if we intend to search for movie
         $this->_movie_key = $moviekey ? $moviekey : false;
