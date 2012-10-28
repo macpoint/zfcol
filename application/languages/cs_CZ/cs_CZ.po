@@ -1,0 +1,537 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: ZF::Col 1.0\n"
+"POT-Creation-Date: 2012-10-26 23:48+0100\n"
+"PO-Revision-Date: 2012-10-26 23:48+0100\n"
+"Last-Translator: Kamil Kantar <kamil.kantar@me.com>\n"
+"Language-Team: Kamil Kantar <kamil.kantar@me.com>\n"
+"Language: Czech\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.4\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop;translate\n"
+"X-Poedit-Basepath: /Applications/MAMP/htdocs/ZFCol\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: application\n"
+
+#: application/controllers/AuthController.php:59
+msgid "Bad username / password"
+msgstr "Špatné jméno / heslo"
+
+#: application/controllers/AuthController.php:64
+#: application/controllers/MoviesController.php:204
+#: application/controllers/UsersController.php:197
+msgid "Please fill-in the form"
+msgstr "Prosím vyplňte formulář"
+
+#: application/controllers/MoviesController.php:102
+msgid "No results found"
+msgstr "Nenalezeny žádné záznamy"
+
+#: application/controllers/MoviesController.php:107
+msgid "Please enter movie name"
+msgstr "Prosím zadejte název filmu"
+
+#: application/controllers/MoviesController.php:156
+msgid "Custom ID (Leave zero if there is none)"
+msgstr "Vlastní ID (Ponechte 0 pokud neexistuje)"
+
+#: application/controllers/MoviesController.php:197
+msgid "Movie was saved"
+msgstr "Film byl uložen"
+
+#: application/controllers/MoviesController.php:199
+msgid "Movie was saved. Movie with this name already exists"
+msgstr "Film byl uložen. Film s tímto názvem již existuje"
+
+#: application/controllers/MoviesController.php:236
+msgid "Movie was edited"
+msgstr "Film byl upraven"
+
+#: application/controllers/MoviesController.php:239
+#: application/controllers/SettingsController.php:65
+msgid "Form is not complete"
+msgstr "Formulář není kompletní"
+
+#: application/controllers/MoviesController.php:284
+msgid "Movie was removed"
+msgstr "Film byl smazán"
+
+#: application/controllers/MoviesController.php:289
+msgid "Cannot remove movie!"
+msgstr "Nelze smazat film!"
+
+#: application/controllers/PdfController.php:39
+#: application/views/scripts/pdf/index.phtml:21
+msgid "All movies"
+msgstr "Všechny filmy"
+
+#: application/controllers/PdfController.php:39
+#: application/views/scripts/pdf/index.phtml:34
+msgid "Favorite movies"
+msgstr "Oblíbené filmy"
+
+#: application/controllers/SettingsController.php:63
+msgid "Settings saved. Please reload the page"
+msgstr "Nastavení uloženo. Prosím obnovte stránku"
+
+#: application/controllers/SettingsController.php:122
+msgid "Settings saved"
+msgstr "Nastavení uloženo"
+
+#: application/controllers/SettingsController.php:126
+msgid "Cannot save settings!"
+msgstr "Nelze uložit nastavení!"
+
+#: application/controllers/SettingsController.php:173
+msgid "Media was removed"
+msgstr "Nosič byl odstraněn"
+
+#: application/controllers/SettingsController.php:179
+msgid "Cannot remove media!"
+msgstr "Nosič nelze odstranit!"
+
+#: application/controllers/SettingsController.php:203
+msgid "Added new media."
+msgstr "Nový nosič byl uložen"
+
+#: application/controllers/SettingsController.php:208
+msgid "Please fill-in the form."
+msgstr "Prosím vyplňte formulář"
+
+#: application/controllers/UserController.php:39
+#: application/controllers/UsersController.php:87
+msgid "User saved"
+msgstr "Uživatel uložen"
+
+#: application/controllers/UserController.php:43
+#: application/controllers/UsersController.php:92
+msgid "Cannot save user!"
+msgstr "Nelze uložit uživatele!"
+
+#: application/controllers/UsersController.php:146
+msgid "User removed"
+msgstr "Uživatel smazán"
+
+#: application/controllers/UsersController.php:150
+msgid "Cannot remove user!"
+msgstr "Nelze smazat uživatele!"
+
+#: application/controllers/UsersController.php:187
+msgid "User was added"
+msgstr "Uživatel byl přidán"
+
+#: application/controllers/UsersController.php:193
+msgid "This username already exists"
+msgstr "Toto uživatelské jméno již existuje"
+
+#: application/forms/Login.php:22 application/forms/User.php:66
+msgid "Username:"
+msgstr "Uživatelské jméno:"
+
+#: application/forms/Login.php:28 application/forms/User.php:73
+msgid "Password:"
+msgstr "Heslo:"
+
+#: application/forms/Login.php:34 application/views/helpers/Userspace.php:48
+msgid "Login"
+msgstr "Přihlásit"
+
+#: application/forms/Media.php:46
+#: application/views/scripts/settings/media.phtml:19
+msgid "Media type"
+msgstr "Typ nosiče"
+
+#: application/forms/Media.php:55 application/forms/Moviedetails.php:168
+#: application/forms/Settings.php:122 application/forms/User.php:102
+msgid "Save"
+msgstr "Uložit"
+
+#: application/forms/Moviedetails.php:53
+msgid "Movie name"
+msgstr "Název filmu"
+
+#: application/forms/Moviedetails.php:62
+msgid "Overview"
+msgstr "Popis"
+
+#: application/forms/Moviedetails.php:75 application/models/Pdf.php:37
+#: application/views/scripts/movies/list.phtml:26
+msgid "Genre"
+msgstr "Žánr"
+
+#: application/forms/Moviedetails.php:84
+msgid "Origin"
+msgstr "Původ"
+
+#: application/forms/Moviedetails.php:93
+msgid "Director"
+msgstr "Režie"
+
+#: application/forms/Moviedetails.php:102
+msgid "Cast"
+msgstr "Hrají"
+
+#: application/forms/Moviedetails.php:112 application/models/Pdf.php:38
+#: application/views/scripts/movies/list.phtml:27
+msgid "Rating"
+msgstr "Hodnocení"
+
+#: application/forms/Moviedetails.php:121
+#: application/views/scripts/movies/show.phtml:48
+msgid "Trailer"
+msgstr "Ukázka"
+
+#: application/forms/Moviedetails.php:130 application/models/Pdf.php:39
+#: application/views/scripts/movies/list.phtml:28
+#: application/views/scripts/settings/media.phtml:14
+msgid "Media"
+msgstr "Nosič"
+
+#: application/forms/Moviedetails.php:137
+msgid "Add to favorities"
+msgstr "Přidat do oblíbených"
+
+#: application/forms/Moviedetails.php:138
+#: application/views/helpers/Favorite.php:37
+msgid "No"
+msgstr "Ne"
+
+#: application/forms/Moviedetails.php:138
+#: application/views/helpers/Favorite.php:37
+msgid "Yes"
+msgstr "Ano"
+
+#: application/forms/Moviedetails.php:144 application/models/Pdf.php:35
+msgid "Custom ID"
+msgstr "Vlastní ID"
+
+#: application/forms/SearchMovie.php:21
+msgid "Search movie:"
+msgstr "Hledat film:"
+
+#: application/forms/SearchMovie.php:30
+msgid "Search"
+msgstr "Hledat"
+
+#: application/forms/SearchResults.php:38
+msgid "Movies found:"
+msgstr "Nalezené filmy"
+
+#: application/forms/Settings.php:67
+msgid "App language: "
+msgstr "Jazyk aplikace:"
+
+#: application/forms/Settings.php:74
+msgid "Movie information source: "
+msgstr "Zdroj filmových informací:"
+
+#: application/forms/Settings.php:86
+msgid "Homepage: "
+msgstr "Hlavní stránka:"
+
+#: application/forms/Settings.php:92
+msgid "Feed 1"
+msgstr "Feed 1"
+
+#: application/forms/Settings.php:100
+msgid "Feed 2"
+msgstr "Feed 2"
+
+#: application/forms/Settings.php:115
+msgid "App font: "
+msgstr "Písmo aplikace: "
+
+#: application/forms/User.php:52
+msgid "Name:"
+msgstr "Jméno:"
+
+#: application/forms/User.php:59
+msgid "Surname:"
+msgstr "Příjmení:"
+
+#: application/forms/User.php:81
+msgid "Verify password:"
+msgstr "Ověření hesla:"
+
+#: application/forms/User.php:95
+msgid "Role: "
+msgstr "Role:"
+
+#: application/models/Pdf.php:34
+msgid "ID"
+msgstr "ID"
+
+#: application/models/Pdf.php:36
+#: application/views/scripts/movies/list.phtml:25
+msgid "Title"
+msgstr "Název"
+
+#: application/views/helpers/Deletemedia.php:41
+#: application/views/helpers/Deleteuser.php:39
+#: application/views/scripts/movies/show.phtml:64
+#: application/views/scripts/settings/media.phtml:20
+#: application/views/scripts/users/show.phtml:9
+msgid "Remove"
+msgstr "Odstranit"
+
+#: application/views/helpers/Userspace.php:43
+msgid "Logout"
+msgstr "Odhlásit"
+
+#: application/layouts/scripts/footer.phtml:18
+#: application/views/scripts/zfcol/about.phtml:14
+msgid "About this app"
+msgstr "O aplikaci"
+
+#: application/layouts/scripts/footer.phtml:21
+msgid "version"
+msgstr "verze"
+
+#: application/layouts/scripts/layout.phtml:67
+msgid "Home"
+msgstr "Domů"
+
+#: application/views/scripts/auth/login.phtml:15
+msgid "Please log in with your username / password"
+msgstr "Prosím přihlašte se jménem / heslem"
+
+#: application/views/scripts/error/error.phtml:14
+msgid "An error occured"
+msgstr "Vyskytla se chyba"
+
+#: application/views/scripts/error/error.phtml:19
+msgid "What's hapenned: "
+msgstr "Co se stalo: "
+
+#: application/views/scripts/index/feeds.phtml:31
+#: application/views/scripts/index/feeds.phtml:52
+msgid "Go ..."
+msgstr "Přejít ..."
+
+#: application/views/scripts/index/feeds.phtml:33
+#: application/views/scripts/index/feeds.phtml:54
+msgid "No feeds defined for this area"
+msgstr "Nejsou nastaveny feedy pro tuto oblast"
+
+#: application/views/scripts/index/sidebar.phtml:14
+msgid "Statistics"
+msgstr "Statistiky"
+
+#: application/views/scripts/index/sidebar.phtml:16
+msgid "Movie count:"
+msgstr "Počet:"
+
+#: application/views/scripts/index/sidebar.phtml:18
+msgid "Last movie:"
+msgstr "Poslední:"
+
+#: application/views/scripts/index/sidebar.phtml:26
+msgid "Best movie:"
+msgstr "Nejlepší:"
+
+#: application/views/scripts/movies/add.phtml:16
+msgid "Add new movie"
+msgstr "Přidat nový film"
+
+#: application/views/scripts/movies/add.phtml:19
+msgid "Search for movie"
+msgstr "Hledat film"
+
+#: application/views/scripts/movies/add.phtml:25
+msgid "Add movie manually"
+msgstr "Přidat ručně"
+
+#: application/views/scripts/movies/add.phtml:34
+msgid "Parser used: "
+msgstr "Použitý vyhledávač: "
+
+#: application/views/scripts/movies/edit.phtml:14
+msgid "Edit movie"
+msgstr "Upravit film"
+
+#: application/views/scripts/movies/list.phtml:14
+msgid "List movies"
+msgstr "Zobrazit filmy"
+
+#: application/views/scripts/movies/list.phtml:18
+msgid "No movies found"
+msgstr "Nenalezeny žádné filmy"
+
+#: application/views/scripts/movies/save.phtml:14
+msgid "Save movie"
+msgstr "Uložit film"
+
+#: application/views/scripts/movies/show.phtml:28
+msgid "Director:"
+msgstr "Režie:"
+
+#: application/views/scripts/movies/show.phtml:29
+msgid "Cast:"
+msgstr "Hrají:"
+
+#: application/views/scripts/movies/show.phtml:35
+msgid "Media:"
+msgstr "Nosič:"
+
+#: application/views/scripts/movies/show.phtml:36
+msgid "Favorite"
+msgstr "Oblíbený"
+
+#: application/views/scripts/movies/show.phtml:37
+msgid "URL:"
+msgstr "URL:"
+
+#: application/views/scripts/movies/show.phtml:38
+msgid "Added:"
+msgstr "Přidáno:"
+
+#: application/views/scripts/movies/show.phtml:39
+msgid "Added by:"
+msgstr "Přidal(a):"
+
+#: application/views/scripts/movies/show.phtml:42
+msgid "More info"
+msgstr "Více informací"
+
+#: application/views/scripts/movies/show.phtml:59
+msgid "Edit"
+msgstr "Upravit"
+
+#: application/views/scripts/movies/trailer.phtml:23
+msgid "<= back to overview"
+msgstr "<= zpět na přehled"
+
+#: application/views/scripts/pdf/index.phtml:14
+#: application/views/scripts/pdf/index.phtml:17
+msgid "Generate PDF"
+msgstr "Vytvořit PDF"
+
+#: application/views/scripts/pdf/index.phtml:26
+#: application/views/scripts/pdf/index.phtml:39
+msgid "Download"
+msgstr "Stáhnout"
+
+#: application/views/scripts/pdf/index.phtml:31
+#: application/views/scripts/pdf/index.phtml:44
+msgid "Show"
+msgstr "Zobrazit"
+
+#: application/views/scripts/settings/addmedia.phtml:14
+#: application/views/scripts/settings/addmedia.phtml:16
+msgid "Add media"
+msgstr "Přidat nosič"
+
+#: application/views/scripts/settings/deletemedia.phtml:14
+msgid "Remove media"
+msgstr "Odstranit nosič"
+
+#: application/views/scripts/settings/editmedia.phtml:14
+msgid "Edit media"
+msgstr "Upravit nosič"
+
+#: application/views/scripts/settings/media.phtml:36
+#: application/views/scripts/users/show.phtml:27
+msgid "Add new ..."
+msgstr "Přidat …"
+
+#: application/views/scripts/users/add.phtml:14
+msgid "Add user"
+msgstr "Přidat uživatele"
+
+#: application/views/scripts/users/edit.phtml:14
+msgid "Edit user"
+msgstr "Upravit uživatele"
+
+#: application/views/scripts/users/show.phtml:1
+msgid "User settings"
+msgstr "Nastavení uživatele"
+
+#: application/views/scripts/users/show.phtml:6
+msgid "Name"
+msgstr "Jméno"
+
+#: application/views/scripts/users/show.phtml:7
+msgid "Username"
+msgstr "Uživatelské jméno"
+
+#: application/views/scripts/users/show.phtml:8
+msgid "Role"
+msgstr "Role"
+
+#: application/views/scripts/zfcol/about.phtml:18
+msgid "is a free software written in PHP & Zend Framework by"
+msgstr "je svobodná aplikace napsaná v PHP & Zend Frameworku, autorem je"
+
+#: application/views/scripts/zfcol/about.phtml:20
+msgid ""
+"\n"
+"        You can use it as you wish as long as you do not violate its license "
+"agreement. \n"
+"        For updates, questions, bug reports and other features, please visit "
+"project's website at"
+msgstr ""
+"\n"
+"        Můžete jí svobodně používat v souladu s jejím licenčním ujednámín. "
+"Pro aktualizace, dotazy a zasílání chyb, prosím navštivte webovou stránku "
+"projektu na"
+
+#: application/views/scripts/zfcol/about.phtml:25
+msgid ""
+"Your installation uses the following free software with its respective "
+"versions:"
+msgstr "Vaše instalace používá tento svobodný software v příslušných verzích: "
+
+#: application/views/scripts/zfcol/about.phtml:34
+msgid "(used by CSFD parser)"
+msgstr "(používá CSFD parser)"
+
+#: application/views/scripts/zfcol/about.phtml:36
+msgid "License"
+msgstr "Licence"
+
+#: application/views/scripts/zfcol/about.phtml:37
+msgid ""
+"This application is licensed under the new BSD which is bundled with its "
+"package in the file LICENSE.txt. You can also read the license at http://"
+"opensource.org/licenses/bsd-3-clause"
+msgstr ""
+"Aplikace je licencovaná pod licencí new BSD jejíž kopie je součástí "
+"instalačního balíčku. K přečtení je také na http://opensource.org/licenses/"
+"bsd-3-clause"
+
+#: application/configs/navigation.xml:5
+msgid "Movies"
+msgstr "Filmy"
+
+#: application/configs/navigation.xml:10
+msgid "Show movies"
+msgstr "Zobrazit filmy"
+
+#: application/configs/navigation.xml:16
+msgid "Add movie"
+msgstr "Přidat film"
+
+#: application/configs/navigation.xml:22
+msgid "Create PDF"
+msgstr "Vytvořit PDF"
+
+#: application/configs/navigation.xml:30
+msgid "Settings"
+msgstr "Nastavení"
+
+#: application/configs/navigation.xml:35
+msgid "App settings"
+msgstr "Nastavení aplikace"
+
+#: application/configs/navigation.xml:40
+msgid "Users settings"
+msgstr "Nastavení uživatelů"
+
+#: application/configs/navigation.xml:46
+msgid "Media settings"
+msgstr "Nastavení nosičů"
+
+#~ msgid "Movie count: "
+#~ msgstr "Počet filmů:"

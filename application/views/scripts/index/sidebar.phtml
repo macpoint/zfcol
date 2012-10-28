@@ -1,0 +1,33 @@
+<?php
+/**
+ * View script to display sidebar
+ * 
+ * @package zfcol
+ * @category application/views/scripts
+ * @author kamil
+ * @version 1.0
+ * @license http://opensource.org/licenses/bsd-3-clause new BSD license
+ * @copyright (c) 2012, Kamil Kantar
+ *
+ */
+?>
+<h4><?php echo $this->translate('Statistics'); ?></h4>
+<ul>
+    <li><?php echo $this->translate('Movie count:') . ' ' . $this->moviecount; ?></li>
+    <?php if ($this->lastmovie) { ?>
+        <li><?php echo $this->translate('Last movie:') . ' '; ?><a href="
+            <?php echo $this->url(array(
+                'controller' => 'movies',
+                'action' => 'show',
+                'id' => $this->lastmovie->id)); ?>"><?php echo $this->lastmovie->name; ?></a>
+        </li>
+            <?php } ?>
+        <?php if ($this->bestmovie) { ?>
+        <li><?php echo $this->translate('Best movie:') . ' '; ?><a href="
+            <?php echo $this->url(array(
+                'controller' => 'movies',
+                'action' => 'show',
+                'id' => $this->bestmovie->id)); ?>"><?php echo $this->bestmovie->name; ?></a>
+        </li>
+            <?php } ?>
+</ul>

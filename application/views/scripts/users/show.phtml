@@ -1,0 +1,31 @@
+<?php Zfcol_Controller_Plugin_Title::getTitle($this->translate('User settings')); ?>
+<div class="box info">
+    <table>
+        <thead>
+            <tr>
+                <th><?php echo $this->translate('Name'); ?></th>
+                <th><?php echo $this->translate('Username'); ?></th>
+                <th><?php echo $this->translate('Role'); ?></th>
+                <th><?php echo $this->translate('Remove'); ?></th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php foreach ($this->list as $user) { ?>
+            <tr>
+                <td><a href="<?php echo $this->url(array(
+                    'controller' => 'users',
+                    'action' => 'edit',
+                    'id' => $user->id)); ?>"><?php echo $user->first_name . " " . $user->last_name; ?></a></td>
+                <td><?php echo $user->username; ?></td>
+                <td><?php echo $user->role; ?></td>
+                <td><?php echo $this->deleteuser($user->id); ?></td>
+            </tr>
+            <?php } ?>
+            <tr>
+                <td colspan="4"><a href="<?php echo $this->url(array(
+                    'controller' => 'users',
+                    'action' => 'add')); ?>"><?php echo $this->translate('Add new ...'); ?></a></td>
+            </tr>
+        </tbody>
+    </table>
+</div>

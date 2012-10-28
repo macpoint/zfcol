@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<parser>
+    <csfd>
+        <identifier>csfd</identifier>
+        <class>Zfcol_Parser_Csfd</class>
+        <url>http://www.csfd.cz/</url>
+        <baseurl>http://www.csfd.cz/film/</baseurl>
+        <searchbase>http://www.csfd.cz/hledat/?q=</searchbase>
+        <key>n/a</key>
+    </csfd>
+    <tmdb>
+        <identifier>tmdb</identifier>
+        <class>Zfcol_Parser_Tmdb</class>
+        <url>http://api.themoviedb.org/3/</url>
+        <baseurl>http://www.themoviedb.org/movie/</baseurl>
+        <searchbase>http://www.themoviedb.org/search?query=</searchbase>
+        <key>23712458e484db135a57bf1f2a9b412b</key>
+        <posterprefix>http://cf2.imgobject.com/t/p/w154</posterprefix>
+        <youtubeprefix>http://www.youtube.com/embed/</youtubeprefix>
+        <lang>en</lang>
+    </tmdb>
+</parser>

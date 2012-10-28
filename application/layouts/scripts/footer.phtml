@@ -1,0 +1,23 @@
+<?php
+/**
+ * Footer layout
+ * 
+ * @package zfcol
+ * @category application/layouts
+ * @author kamil
+ * @version 1.0
+ * @license http://opensource.org/licenses/bsd-3-clause new BSD license
+ * @copyright (c) 2012, Kamil Kantar
+ *
+ */
+?>
+<footer>
+    <span class="f-left">
+        <?php echo '&copy;'; ?> 
+        <?php $date = new Zend_Date; echo $date->get('YYYY') . " " . Zend_Registry::get('AppInfo')->getAuthor(); ?> | 
+        <a href="<?php echo $this->url(array('controller' => 'zfcol', 'action' => 'about'), null, true) . '">' . $this->translate('About this app'); ?></a>
+    </span>
+    <span style="float: right">
+        <?php echo Zend_Registry::get('AppInfo')->getTag() . " " . $this->translate('version') . " " . Zend_Registry::get('AppInfo')->getVersion(); ?>
+    </span>
+</footer>

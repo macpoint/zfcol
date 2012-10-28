@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configdata>
+    <production>
+        <database>
+            <adapter>mysqli</adapter>
+            <params>
+                <host>localhost</host>
+                <username>[your-username]</username>
+                <password>[your-password]</password>
+                <dbname>zfcol</dbname>
+                <charset>utf8</charset>
+                <default>true</default>
+            </params>
+        </database>
+    </production>
+</configdata>

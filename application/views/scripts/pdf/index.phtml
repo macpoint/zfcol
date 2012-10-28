@@ -1,0 +1,48 @@
+<?php
+/**
+ * PDF view script
+ * 
+ * @package zfcol
+ * @category application/views/scripts
+ * @author kamil
+ * @version 1.0
+ * @license http://opensource.org/licenses/bsd-3-clause new BSD license
+ * @copyright (c) 2012, Kamil Kantar
+ *
+ */
+?>
+<?php Zfcol_Controller_Plugin_Title::getTitle($this->translate('Generate PDF')); ?>
+<div class="info box">
+
+    <h4><?php echo $this->translate('Generate PDF'); ?></h4>
+    <table>
+
+        <tr>
+            <td><?php echo $this->translate('All movies'); ?></td>
+            <td><a href="<?php echo $this->url(array(
+                'controller' => 'pdf',
+                'action' => 'generate',
+                'what' => 'all',
+                'type' => 'D')); ?>"><?php echo $this->translate('Download'); ?></a></td>
+            <td><a href="<?php echo $this->url(array(
+                'controller' => 'pdf',
+                'action' => 'generate',
+                'what' => 'all',
+                'type' => 'I')); ?>"><?php echo $this->translate('Show'); ?></a></td>
+        </tr>
+        <tr>
+            <td><?php echo $this->translate('Favorite movies'); ?></td>
+            <td><a href="<?php echo $this->url(array(
+                'controller' => 'pdf',
+                'action' => 'generate',
+                'what' => 'favorite',
+                'type' => 'D')); ?>"><?php echo $this->translate('Download'); ?></a></td>
+            <td><a href="<?php echo $this->url(array(
+                'controller' => 'pdf',
+                'action' => 'generate',
+                'what' => 'favorite',
+                'type' => 'I')); ?>"><?php echo $this->translate('Show'); ?></a></td>
+        </tr>
+    </table>
+
+</div>

@@ -1,0 +1,58 @@
+<?php
+/**
+ * View script to display RSS feeds
+ * 
+ * @package zfcol
+ * @category application/views/scripts
+ * @author kamil
+ * @version 1.0
+ * @license http://opensource.org/licenses/bsd-3-clause new BSD license
+ * @copyright (c) 2012, Kamil Kantar
+ *
+ */
+?>
+<?php Zfcol_Controller_Plugin_Title::getTitle('Home Page'); ?>
+<section class="ym-grid linearize-level-2">
+    <article class="ym-g50 ym-gl">
+        <div class="ym-gbox">
+            <!-- content -->
+            
+            <?php if ($this->feed1) { ?>
+            
+            <h4><?php echo $this->feed1->getTitle(); ?></h4>
+            <ul>
+                <?php $i = 1; ?>
+                <?php foreach ($this->feed1 as $item) { ?>
+                <?php $i++; ?>
+                <li><a href="<?php echo $item->getLink(); ?>"><?php echo $item->getTitle(); ?></a></li>
+                <?php if ($i > 10) break; ?>
+                <?php } ?>   
+            </ul>
+            <a href="<?php echo $this->feed1->getLink(); ?>" class='ym-button ym-next' style='font-size: 11px;'><?php echo $this->translate('Go ...'); ?></a>
+            <?php } else { ?>
+            <p class='box info'><?php echo $this->translate('No feeds defined for this area'); ?></p>
+            <?php } ?>
+        </div>
+    </article>
+    <article class="ym-g50 ym-gl">
+        <div class="ym-gbox">
+            <!-- content -->
+            
+            <?php if ($this->feed2) { ?>
+            
+            <h4><?php echo $this->feed2->getTitle(); ?></h4>
+            <ul>
+                <?php $i = 1; ?>
+                <?php foreach ($this->feed2 as $item) { ?>
+                <?php $i++; ?>
+                <li><a href="<?php echo $item->getLink(); ?>"><?php echo $item->getTitle(); ?></a></li>
+                <?php if ($i > 10) break; ?>
+                <?php } ?>    
+            </ul>
+            <a href="<?php echo $this->feed2->getLink(); ?>" class='ym-button ym-next' style='font-size: 11px;'><?php echo $this->translate('Go ...'); ?></a>
+            <?php } else { ?>
+            <p class='box info'><?php echo $this->translate('No feeds defined for this area'); ?></p>
+            <?php } ?>
+        </div>
+    </article>
+</section>

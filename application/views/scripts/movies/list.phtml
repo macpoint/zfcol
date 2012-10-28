@@ -1,0 +1,47 @@
+<?php
+/**
+ * List movies view script
+ * 
+ * @package zfcol
+ * @category application/views/scripts
+ * @author kamil
+ * @version 1.0
+ * @license http://opensource.org/licenses/bsd-3-clause new BSD license
+ * @copyright (c) 2012, Kamil Kantar
+ *
+ */
+?>
+<?php Zfcol_Controller_Plugin_Title::getTitle($this->translate('List movies')); ?>
+<?php 
+if (count($this->movies) == 0) { 
+    $this->type = 'warning';
+    $this->msg = $this->translate('No movies found');
+} else {
+?>
+<div class="info box">
+        <table id="datatable" class="pretty">
+            <thead>
+                <tr>
+                    <th><?php echo $this->translate('Title'); ?></th>
+                    <th><?php echo $this->translate('Genre'); ?></th>
+                    <th><?php echo $this->translate('Rating'); ?></th>
+                    <th><?php echo $this->translate('Media'); ?></th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php foreach ($this->movies as $movie) { ?>
+                    <tr>
+                        <td><a href="<?php echo $this->url(array(
+                            'controller' => 'movies', 
+                            'action' => 'show', 
+                            'id' => $movie->id)); ?>"><?php echo $movie->name; ?></a></td>
+                        <td><?php echo $movie->genre; ?></td>
+                        <td><?php echo $movie->rating; ?>%</td>
+                        <td><?php echo $this->mediatype($movie->media); ?></td>
+                    </tr>
+                <?php } ?>
+            </tbody>
+        </table>
+  
+</div>
+<?php }

@@ -1,0 +1,24 @@
+<?php
+/**
+ * Display movie trailer view script
+ * 
+ * @package zfcol
+ * @category application/views/scripts
+ * @author kamil
+ * @version 1.0
+ * @license http://opensource.org/licenses/bsd-3-clause new BSD license
+ * @copyright (c) 2012, Kamil Kantar
+ *
+ */
+?>
+<?php Zfcol_Controller_Plugin_Title::getTitle($this->movie['name'] . ' - Trailer'); ?>
+<div class="box info">
+    <h3><?php echo $this->movie ['name']; ?></h3>
+    <br><br>
+    <iframe width="685" height="360" src="<?php echo $this->movie['trailer']; ?>" frameborder="0" allowfullscreen></iframe>
+    <br><br>
+    <a href="<?php echo $this->url(array(
+        'controller' => 'movies',
+        'action' => 'show',
+        'id' => $this->movie['id'])) ?>"><?php echo $this->translate('<= back to overview'); ?></a>   
+</div>

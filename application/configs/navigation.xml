@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <nav>
+        <page1>
+            <label>Movies</label>
+            <uri>#</uri>
+            <resource>default:movies</resource>
+            <pages>
+                <page1_1>
+                    <label>Show movies</label>
+                    <controller>movies</controller>
+                    <action>list</action>
+                    <resource>default:movies</resource>
+                </page1_1>
+                <page1_2>
+                    <label>Add movie</label>
+                    <controller>movies</controller>
+                    <action>add</action>
+                    <resource>default:movies:add</resource>
+                </page1_2>
+                <page1_3>
+                    <label>Create PDF</label>
+                    <controller>pdf</controller>
+                    <action>index</action>
+                    <resource>default:pdf</resource>
+                </page1_3>
+            </pages>
+        </page1>	
+        <page2>
+            <label>Settings</label>
+            <uri>#</uri>
+            <resource>default:settings</resource>
+            <pages>
+                <page2_1>
+                    <label>App settings</label>
+                    <controller>settings</controller>
+                    <resource>default:settings:index</resource>
+                </page2_1>
+                <page2_2>
+                    <label>Users settings</label>
+                    <controller>users</controller>
+                    <action>show</action>
+                    <resource>default:users</resource>
+                </page2_2>
+                <page2_3>
+                    <label>Media settings</label>
+                    <controller>settings</controller>
+                    <action>media</action>
+                    <resource>default:settings</resource>
+                </page2_3>
+            </pages>
+        </page2>
+    </nav>
+</config>

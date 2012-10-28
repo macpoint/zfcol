@@ -1,0 +1,84 @@
+<?php
+/**
+ * Application main layout
+ * 
+ * @package zfcol
+ * @category application/layouts
+ * @author kamil
+ * @version 1.0
+ * @license http://opensource.org/licenses/bsd-3-clause new BSD license
+ * @copyright (c) 2012, Kamil Kantar
+ *
+ */
+?>
+<?php echo $this->doctype() . "\n" ?>
+<head>
+
+    <?php echo $this->headMeta() . "\n" ?>
+    <?php echo $this->headTitle() . "\n" ?>
+    <?php echo $this->headLink() . "\n" ?>
+    <?php echo $this->headScript() . "\n" ?>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--[if lte IE 7]>
+    <link href="../yaml/core/iehacks.css" rel="stylesheet" type="text/css" />
+    <![endif]-->
+
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+    <ul class="ym-skiplinks">
+        <li><a class="ym-skip" href="#nav">Skip to navigation (Press Enter)</a></li>
+        <li><a class="ym-skip" href="#main">Skip to main content (Press Enter)</a></li>
+    </ul>
+    <div class="ym-wrapper">
+        <div class="ym-wbox">
+            <header>
+
+            </header>
+            <nav id="nav">
+                <div class="ym-hlist" >
+                    <div class="breadcrumbs"><?php print $this->navigation()->breadcrumbs(); ?></div>
+                    <div class="ym-searchform">
+                    <ul>
+                        <strong><?php echo $this->render('header.phtml'); ?></strong>
+                    </ul>
+                    </div>
+                </div>
+            </nav>
+            <div id="main">
+                <div class="ym-column linearize-level-1">
+                    <div class="ym-col1">
+                        <div class="ym-cbox">
+                            <?php echo $this->msgbox($this->type, $this->msg); ?>
+                            <?php echo $this->layout()->content; ?>
+                        </div>
+                    </div>
+
+                    <!-- Main menu -->
+                    <aside class="ym-col3">
+                        <div class="ym-cbox">
+                            <h4>Menu</h4>
+                            <div class="ym-contain-dt">
+                                <nav class="ym-vlist">
+                                    <ul><li><a href="<?php echo $this->url(array('controller' => 'index', 'action' => 'index'), null, true); ?>"><?php echo $this->translate('Home'); ?></a></li></ul>
+                                    <?php print $this->navigation()->menu(); ?>
+                                </nav>
+                                <?php print $this->action('sidebar', 'index'); ?>
+                            </div>
+                        </div>
+                    </aside>
+                    <!-- end Main menu -->
+                </div>
+            </div>
+            <?php echo $this->render('footer.phtml') ?>
+        </div>
+    </div>
+    <!-- full skip link functionality in webkit browsers -->
+    <script src="../yaml/core/js/yaml-focusfix.js"></script>
+    <?php echo $this->inlineScript() . "\n" ?>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<permissions>
+    <roles>
+        <role name="guest" />
+        <role name="editor" inherits="guest" />
+        <role name="administrator" inherits="editor" />
+    </roles>
+    <resources>
+        <module name="default" allow="guest">
+            <controller name="movies" allow="guest">
+                <action name="add" allow="editor" />
+                <action name="edit" allow="editor" />
+                <action name="delete" allow="editor" />
+                <action name="preview" allow="editor" />
+            </controller>
+            <controller name="users" allow="administrator">
+            </controller>
+            <controller name="settings" allow="editor">
+                <action name="index" allow="administrator" />
+                <action name="media" allow="editor" />
+                <action name="addmedia" allow="editor" />
+                <action name="editmedia" allow="editor" />
+                <action name="deletemedia" allow="editor" />
+            </controller>
+            <controller name="pdf" allow="guest">
+            </controller>
+            <controller name="user" allow="editor">
+            </controller>
+        </module>
+    </resources>
+</permissions>

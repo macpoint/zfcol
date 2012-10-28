@@ -1,0 +1,40 @@
+<?php
+/**
+ * Media view script
+ * 
+ * @package zfcol
+ * @category application/views/scripts
+ * @author kamil
+ * @version 1.0
+ * @license http://opensource.org/licenses/bsd-3-clause new BSD license
+ * @copyright (c) 2012, Kamil Kantar
+ *
+ */
+?>
+<?php Zfcol_Controller_Plugin_Title::getTitle($this->translate('Media')); ?>
+<div class="box info">
+    <table>
+        <thead>
+            <tr>
+                <th><?php echo $this->translate('Media type'); ?></th>
+                <th><?php echo $this->translate('Remove'); ?></th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php foreach ($this->media as $type) { ?>
+            <tr>
+                <td><a href="<?php echo $this->url(array(
+                    'controller' => 'settings',
+                    'action' => 'editmedia',
+                    'id' => $type->id)); ?>"><?php echo $type->type; ?></a></td>   
+                <td><?php echo $this->deletemedia($type->id); ?></td>
+            </tr>
+            <?php } ?>
+            <tr>
+                <td colspan="2"><a href="<?php echo $this->url(array(
+                    'controller' => 'settings',
+                    'action' => 'addmedia')); ?>"><?php echo $this->translate('Add new ...'); ?></a></td>
+            </tr>
+        </tbody>
+    </table>
+</div>

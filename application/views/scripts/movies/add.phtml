@@ -1,0 +1,36 @@
+<?php
+/**
+ * Add movie view script
+ * 
+ * @package zfcol
+ * @category application/views/scripts
+ * @author kamil
+ * @version 1.0
+ * @license http://opensource.org/licenses/bsd-3-clause new BSD license
+ * @copyright (c) 2012, Kamil Kantar
+ *
+ */
+?>
+<?php Zfcol_Controller_Plugin_Title::getTitle(); ?>
+<div class="box info">
+    <h4><?php echo $this->translate('Add new movie'); ?></h4>
+    <br>
+    <div class="jquery_tabs">
+        <h4><?php echo $this->translate('Search for movie'); ?></h4>
+        <div class="tabbody">
+            <br>
+            <?php $this->searchform->setAction($this->url()); ?>
+            <?php echo $this->searchform; ?>
+        </div>
+        <h4><?php echo $this->translate('Add movie manually'); ?></h4>
+        <div class="tabbody">
+            <br>
+            <?php $this->manualform->setAction('/movies/save'); ?>
+            <?php echo $this->manualform; ?>
+        </div>
+    </div>
+    <br>
+    <div class="parsername">
+        <?php echo $this->translate('Parser used: ') . ' ' . $this->parsername; ?>
+    </div>
+</div>

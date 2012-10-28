@@ -1,0 +1,68 @@
+<?php
+/**
+ * Show movie view script
+ * 
+ * @package zfcol
+ * @category application/views/scripts
+ * @author kamil
+ * @version 1.0
+ * @license http://opensource.org/licenses/bsd-3-clause new BSD license
+ * @copyright (c) 2012, Kamil Kantar
+ *
+ */
+?>
+<?php Zfcol_Controller_Plugin_Title::getTitle($this->movie['name']); ?>
+<?php $parser = Zend_Registry::get('movieparser'); ?>
+<div class="info box">
+    <div class="bordered float-left">
+        <a href="<?php echo $this->movie['url']; ?>"><img src="<?php echo Zend_Controller_Front::getInstance()->getBaseUrl() . '/images/covers/' . $this->movie['poster']; ?>" /></a>
+    </div>
+    <div class="bordered float-right rating">
+        <?php echo $this->movie ['rating']; ?>%
+    </div>
+    <div class="movieinfo">
+        <h3><?php echo $this->movie ['name']; ?></h3>
+        <em><?php echo $this->movie['genre']; ?> <br> <?php echo $this->movie['origin']; ?></em><hr>
+        <?php echo $this->movie['description']; ?>
+        <hr>
+        <strong><?php echo $this->translate('Director:'); ?></strong> <?php echo $this->movie['director']; ?><br>
+        <strong><?php echo $this->translate('Cast:'); ?></strong> <?php echo $this->movie['starring']; ?>
+
+        <hr>
+
+        <div id="moreinfo">
+            <br style="clear: both;">
+            <strong><?php echo $this->translate('Media:'); ?> </strong><?php echo $this->mediatype($this->movie['media']); ?><br>
+            <strong><?php echo $this->translate('Favorite'); ?> </strong><?php echo $this->favorite($this->movie['id']); ?><br>
+            <strong><?php echo $this->translate('URL:'); ?> </strong><a href="<?php echo $this->movieurl($this->movie['id']); ?>"><?php echo $this->movieurl($this->movie['id']); ?></a><br>
+            <strong><?php echo $this->translate('Added:'); ?> </strong><?php echo $this->movie['createDate']; ?><br>
+            <strong><?php echo $this->translate('Added by:'); ?> </strong><?php echo $this->userinfo($this->movie['creator']); ?>
+        </div>
+        <br style="clear: both;">
+        <a href="#" id="morebutton" class="ym-button ym-add"><?php echo $this->translate('More info'); ?></a>
+
+        <?php if (!empty($this->movie['trailer'])) { ?>
+            <a href="<?php echo $this->url(array(
+                'controller' => 'movies',
+                'action' => 'trailer',
+                'id' => $this->movie['id'])); ?>" class="ym-button ym-play"><?php echo $this->translate('Trailer'); ?></a>
+            <?php
+        }
+        
+        // display 'edit' & 'delete' buttons if user is logged in 
+        $auth = Zend_Auth::getInstance();
+        if ($auth->hasIdentity()) {
+            ?>
+            <a href="<?php echo $this->url(array(
+                'controller' => 'movies',
+                'action' => 'edit',
+                'id' => $this->movie['id'])); ?>" class="ym-button ym-play"><?php echo $this->translate('Edit'); ?></a>
+            <a href="<?php echo $this->url(array(
+                'controller' => 'movies',
+                'action' => 'delete',
+                'id' => $this->movie['id'],
+                'key' => $this->key)); ?>" class="ym-button ym-play"><?php echo $this->translate('Remove'); ?></a>
+
+        <?php } ?>
+    </div>
+</div>

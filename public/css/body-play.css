@@ -1,0 +1,15 @@
+@media all {
+
+    /* (en) base layout gets standard font size 14px */
+    /* (de) Basis-Layout erhält Standardschriftgröße von 14 Pixeln */
+    body {
+        font-family: "Play", Georgia, "Times New Roman", Times, serif;
+        font-size:87.50%; /* base: 14px */
+        color:#444;
+
+        /* (en) Prevent auto-scaling of text in mobile webkit browsers */
+        /* (de) Automatische Schriftvergrößerung in mobilen Webkit-Browsern vermeiden */
+        -webkit-text-size-adjust:100%;
+    }
+
+}
