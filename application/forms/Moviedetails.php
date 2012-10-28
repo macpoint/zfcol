@@ -196,9 +196,12 @@ class Application_Form_Moviedetails extends Zend_Form {
     public function getMediaTypes() {
         $media = new Application_Model_Media();
         $medialist = $media->fetchAll();
-
+        
+        // we count media types from 1
+        $mediaid = 1;
         foreach ($medialist as $type) {
-            $this->_mediaType[] = $type->type;
+            $this->_mediaType[$mediaid] = $type->type;
+            $mediaid++;
         }
 
         return $this->_mediaType;
