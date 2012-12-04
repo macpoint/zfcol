@@ -21,7 +21,7 @@ class Application_Model_Movies extends Zend_Db_Table_Abstract {
      * Get all movie information
      * 
      * @param int $id movie id
-     * @return type array movie info
+     * @return array movie info
      * @throws Zend_Db_Exception
      */
     public function getMovieInfo($id) {

@@ -43,7 +43,7 @@ class ZfcolController extends Zend_Controller_Action {
 
         $www = array();
         $www['zfcol'] = Zend_Registry::get('AppInfo')->getWebpage();
-        $www['zf'] = 'http://framewerk.zend.com';
+        $www['zf'] = 'http://framework.zend.com';
         $www['php'] = 'http://www.php.net';
         $www['yaml'] = 'http://www.yaml.de';
         $www['tcpdf'] = 'http://www.tcpdf.org';
